@@ -4,8 +4,8 @@ let annualExpenses = 0
 
 // Your Code Here
 
-for(let i=0;i<weeklyExpenseQuestions.length;i++ ){
-    let answer = parseFloat(window.prompt(weeklyExpenseQuestions[i]))
+for(let i=weeklyExpenseQuestions.length;i>0;i-- ){
+    let answer = parseFloat(window.prompt(weeklyExpenseQuestions[i-1]))
     console.log(answer)
     weeklyExpenses = weeklyExpenses + answer
 }
@@ -16,9 +16,11 @@ for(let i=0;i<monthlyExpenseQuestions.length;i++ ){
     monthlyExpenses = monthlyExpenses + answer
 }
 
-for(let i=0;i<annualExpenseQuestions.length;i++ ){
-    let answer = parseFloat(window.prompt(annualExpenseQuestions[i]))
+let n=0
+while(n<annualExpenseQuestions.length){
+    let answer = parseFloat(window.prompt(annualExpenseQuestions[n]))
     console.log(answer)
+    n++
     annualExpenses = annualExpenses + answer
 }
 
